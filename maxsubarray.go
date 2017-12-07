@@ -1,19 +1,15 @@
 package algorithm
 
 func FindMaximumSubarrayLinear(in []int, low, high int) (left, right, sum int) {
-	left = 0
-	right = 0
 	sum = in[low]
 	temp_sum := 0
 	temp_left := 0
 	for i := low; i <= high; i++ {
 		if in[i] > (temp_sum + in[i]) {
 			temp_sum = in[i]
+			temp_left = i
 		} else {
 			temp_sum = temp_sum + in[i]
-		}
-		if temp_sum == in[i] {
-			temp_left = i
 		}
 		if temp_sum > sum {
 			sum = temp_sum
