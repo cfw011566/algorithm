@@ -1,2 +1,1 @@
-# algorithm
-Introduction to Algorithms in Golang
+# Introduction to Algorithms in Golang
